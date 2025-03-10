@@ -1,44 +1,52 @@
 .header {
-    position: relative;
-    width: 100%;
-    height: 175px; /* Adjust as needed */
+  position: relative;
+  width: 100%;
+  height: 175px;
+  /* Adjust as needed */
 }
 
 .header-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .header-title {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white; /* Adjust color for visibility */
-    font-size: 2em; /* Adjust size as needed */
-    font-weight: bold;
-    text-align: center;
-    background: #2BD9473B; /* Optional: adds slight background */
-    padding: 10px;
-    border-radius: 5px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  /* Adjust color for visibility */
+  font-size: 2em;
+  /* Adjust size as needed */
+  font-weight: bold;
+  text-align: center;
+  background: #2BD9473B;
+  /* Optional: adds slight background */
+  padding: 10px;
+  border-radius: 5px;
 }
+
 p {
-    max-width: 100%;  
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
+
 /* Fixed Header */
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: white; /* Optional */
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  /* Optional */
+  z-index: 1000;
 }
 
 /* Push content down so it doesn't get hidden under the header */
 body {
-    margin-top: 200px; /* Adjust based on the header height */
+  margin-top: 200px;
+  /* Adjust based on the header height */
 }
