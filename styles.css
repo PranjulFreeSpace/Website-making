@@ -1,52 +1,36 @@
+/* Fixed Header with Gradient Background */
 .header {
-  position: relative;
-  width: 100%;
-  height: 175px;
-  /* Adjust as needed */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px; /* Adjust as needed */
+    background: linear-gradient(135deg, #FF3131, #0057FF); /* Gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 
-.header-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
+/* Header Text Styling */
 .header-title {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  /* Adjust color for visibility */
-  font-size: 2em;
-  /* Adjust size as needed */
-  font-weight: bold;
-  text-align: center;
-  background: #2BD9473B;
-  /* Optional: adds slight background */
-  padding: 10px;
-  border-radius: 5px;
+    color: white;
+    font-size: 2em; /* Adjust size as needed */
+    font-weight: bold;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3); /* Transparent background for visibility */
+    padding: 10px;
+    border-radius: 5px;
 }
 
+/* Ensures Text Breaks Instead of Overflowing */
 p {
-  max-width: 100%;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
-/* Fixed Header */
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: white;
-  /* Optional */
-  z-index: 1000;
-}
-
-/* Push content down so it doesn't get hidden under the header */
+/* Push Content Down (Prevents Overlapping with Fixed Header) */
 body {
-  margin-top: 200px;
-  /* Adjust based on the header height */
+    margin-top: 175px; /* Same height as the header */
 }
