@@ -1,36 +1,42 @@
 /* Fixed Header with Gradient Background */
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 150px; /* Adjust as needed */
-    background: linear-gradient(135deg, #FF3131, #0057FF); /* Gradient */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  /* Adjust as needed */
+  background: linear-gradient(135deg, #FF3131, #0057FF);
+  /* Gradient */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
 /* Header Text Styling */
 .header-title {
-    color: white;
-    font-size: 2em; /* Adjust size as needed */
-    font-weight: bold;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.3); /* Transparent background for visibility */
-    padding: 10px;
-    border-radius: 5px;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2em;
+  /* Adjust size as needed */
+  font-weight: bold;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3);
+  /* Transparent background for visibility */
+  padding: 10px;
+  border-radius: 5px;
 }
 
 /* Ensures Text Breaks Instead of Overflowing */
 p {
-    max-width: 100%;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Push Content Down (Prevents Overlapping with Fixed Header) */
 body {
-    margin-top: 175px; /* Same height as the header */
+  margin-top: 175px;
+  /* Same height as the header */
 }
