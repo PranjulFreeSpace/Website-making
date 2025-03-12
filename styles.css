@@ -28,6 +28,10 @@
   border-radius: 5px;
 }
 
+.list {
+  
+}
+
 /* Ensures Text Breaks Instead of Overflowing */
 p {
   max-width: 100%;
