@@ -82,3 +82,21 @@ p {
   background: rgba(255, 255, 255, 0.2);
 }
 
+@media (max-width: 600px) {
+  .list ul {
+    justify-content: space-evenly; /* Ensures equal spacing between items */
+    width: 100%; /* Takes full width to distribute items properly */
+  }
+
+  .list ul li {
+    flex: 1; /* Ensures each item takes equal space */
+    text-align: center; /* Centers text within each item */
+  }
+
+  .list ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap; /* Prevents text from wrapping */
+  }
+}
