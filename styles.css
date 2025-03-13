@@ -4,16 +4,19 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 150px;
+  height: auto;
+  min-height:170px;
   /* Adjust as needed */
   background: linear-gradient(135deg, #0057FF, #FF3131);
   /* Gradient */
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 15px 0;
   align-items: center;
   z-index: 1000;
   padding-top: 10px;
+  box-sizing: border-box;
 }
 
 /* Header Text Styling */
@@ -53,16 +56,21 @@ p {
 
 /* Push Content Down (Prevents Overlapping with Fixed Header) */
 body {
-  padding-top: 150px;
+  padding-top: calc(170px + 15px);
   /* Same height as the header */
 
 }
 
 .list ul {
   display: flex;
-  gap: 20px;
+  flex-wrap: nowrap;
+  gap: 15px;
   list-style: none;
   padding: 0;
+  margin-bottom:5px;
+  overflow: hidden;
+  justify-content: center;
+  align-items:center;
 }
 
 .list ul li a {
