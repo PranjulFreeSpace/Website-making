@@ -81,7 +81,14 @@ p {
 .list ul li a:hover {
   background: rgba(255, 255, 255, 0.2);
 }
-
+body {
+    background-color: #f9f5ec; /* Light warm background for a cozy feel */
+    color: #333; /* Dark text for contrast */
+}
+#welcome {
+    font-family: 'Kalam', cursive;
+    font-size: 1.4em;
+}
 @media (max-width: 600px) {
   .header {
     min-height: 120px; /* Reduce header height for better spacing */
