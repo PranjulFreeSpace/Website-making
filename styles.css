@@ -83,20 +83,27 @@ p {
 }
 
 @media (max-width: 600px) {
-  .list ul {
-    justify-content: space-evenly; /* Ensures equal spacing between items */
-    width: 100%; /* Takes full width to distribute items properly */
+  .header {
+    min-height: 120px; /* Reduce header height for better spacing */
   }
 
-  .list ul li {
-    flex: 1; /* Ensures each item takes equal space */
-    text-align: center; /* Centers text within each item */
+  .header-title {
+    font-size: 1.5em; /* Adjust font size for readability */
+    padding: 5px;
+  }
+
+  .list ul {
+    flex-wrap: wrap; /* Allow items to wrap if needed */
+    justify-content: space-evenly; /* Center items properly */
+    gap: 10px;
   }
 
   .list ul li a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap; /* Prevents text from wrapping */
+    padding: 6px 10px; /* Adjust padding for better spacing */
+    font-size: 0.9em; /* Reduce font size slightly */
+  }
+  .list ul li {
+    flex: 1 1 40%;
+    text-align: center;
   }
 }
