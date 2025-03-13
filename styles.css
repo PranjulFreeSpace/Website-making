@@ -55,11 +55,7 @@ p {
 }
 
 /* Push Content Down (Prevents Overlapping with Fixed Header) */
-body {
-  padding-top: calc(170px + 15px);
-  /* Same height as the header */
 
-}
 
 .list ul {
   display: flex;
