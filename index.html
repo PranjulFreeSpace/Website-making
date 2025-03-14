@@ -14,9 +14,15 @@
   <link rel="stylesheet" href="styles.css">
   
   <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- Preload the font file -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+  <!-- Fallback for browsers without JavaScript support -->
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap">
+  </noscript>
   
   <!-- Google Site Verification -->
   <meta name="google-site-verification" content="FLHffTcD4IKZdl0bL0DYA-beOSsbOZ9HGr-TrM0gyVM" />
