@@ -117,4 +117,7 @@ body {
     flex: 1 1 40%; /* Allow items to take up 40% of the width */
     text-align: center; /* Center-align text */
   }
+  .foot {
+    font-size: 12px;
+  }
 }
