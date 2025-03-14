@@ -6,29 +6,30 @@
   width: 100%;
   height: auto;
   min-height: 170px;
-  background: linear-gradient(135deg, #0057FF, #FF3131);
+  background: linear-gradient(135deg, #0057ff, #ff3131); /* Gradient background */
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 15px 0;
   align-items: center;
-  z-index: 1000;
+  z-index: 1000; /* Ensure header stays on top */
   padding-top: 10px;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Include padding in element's total width/height */
 }
 
 /* Header Text Styling */
 .header-title {
   color: white;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: 2em;
   font-weight: bold;
   text-align: center;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 5px; /* Rounded corners */
 }
 
+/* Footer Styling */
 .foot {
   font-size: 8px;
   position: fixed;
@@ -39,7 +40,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #A3A3A3;
+  background: #a3a3a3; /* Light gray background */
   padding: 5px;
 }
 
@@ -50,11 +51,12 @@ p {
   overflow-wrap: break-word;
 }
 
+/* Navigation List Styling */
 .list ul {
   display: flex;
   flex-wrap: nowrap;
-  gap: 15px;
-  list-style: none;
+  gap: 15px; /* Space between list items */
+  list-style: none; /* Remove default bullet points */
   padding: 0;
   margin-bottom: 5px;
   overflow: hidden;
@@ -62,51 +64,57 @@ p {
   align-items: center;
 }
 
+/* Navigation Links Styling */
 .list ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
   padding: 8px 15px;
-  border-radius: 5px;
-  transition: background 0.3s;
+  border-radius: 5px; /* Rounded corners */
+  transition: background 0.3s; /* Smooth hover effect */
 }
 
+/* Hover Effect for Navigation Links */
 .list ul li a:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
 }
 
+/* Body Styling */
 body {
-    background-color: #f9f5ec;
-    color: #333;
+  background-color: #f9f5ec; /* Light beige background */
+  color: #333; /* Dark gray text */
 }
 
+/* Welcome Section Styling */
 #welcome {
-    font-family: 'Kalam', cursive;
-    font-size: 1.4em;
+  font-family: "Kalam", cursive;
+  font-size: 1.4em;
 }
 
+/* Responsive Design for Smaller Screens */
 @media (max-width: 600px) {
   .header {
-    min-height: 120px;
+    min-height: 120px; /* Reduce header height */
   }
 
   .header-title {
-    font-size: 1.5em;
-    padding: 5px;
+    font-size: 1.5em; /* Smaller font size */
+    padding: 5px; /* Less padding */
   }
 
   .list ul {
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 10px;
+    flex-wrap: wrap; /* Allow wrapping of list items */
+    justify-content: space-evenly; /* Evenly distribute items */
+    gap: 10px; /* Reduce gap between items */
   }
 
   .list ul li a {
-    padding: 6px 10px;
-    font-size: 0.9em;
+    padding: 6px 10px; /* Smaller padding */
+    font-size: 0.9em; /* Smaller font size */
   }
+
   .list ul li {
-    flex: 1 1 40%;
-    text-align: center;
+    flex: 1 1 40%; /* Allow items to take up 40% of the width */
+    text-align: center; /* Center-align text */
   }
 }
