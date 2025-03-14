@@ -5,10 +5,8 @@
   left: 0;
   width: 100%;
   height: auto;
-  min-height:170px;
-  /* Adjust as needed */
+  min-height: 170px;
   background: linear-gradient(135deg, #0057FF, #FF3131);
-  /* Gradient */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,17 +22,15 @@
   color: white;
   font-family: 'Courier New', Courier, monospace;
   font-size: 2em;
-  /* Adjust size as needed */
   font-weight: bold;
   text-align: center;
   background: rgba(0, 0, 0, 0.3);
-  /* Transparent background for visibility */
   padding: 10px;
   border-radius: 5px;
 }
 
 .foot {
-  font-size:8px;
+  font-size: 8px;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -44,7 +40,7 @@
   justify-content: center;
   align-items: center;
   background: #A3A3A3;
-  padding:5px;
+  padding: 5px;
 }
 
 /* Ensures Text Breaks Instead of Overflowing */
@@ -54,19 +50,16 @@ p {
   overflow-wrap: break-word;
 }
 
-/* Push Content Down (Prevents Overlapping with Fixed Header) */
-
-
 .list ul {
   display: flex;
   flex-wrap: nowrap;
   gap: 15px;
   list-style: none;
   padding: 0;
-  margin-bottom:5px;
+  margin-bottom: 5px;
   overflow: hidden;
   justify-content: center;
-  align-items:center;
+  align-items: center;
 }
 
 .list ul li a {
@@ -81,33 +74,36 @@ p {
 .list ul li a:hover {
   background: rgba(255, 255, 255, 0.2);
 }
+
 body {
-    background-color: #f9f5ec; /* Light warm background for a cozy feel */
-    color: #333; /* Dark text for contrast */
+    background-color: #f9f5ec;
+    color: #333;
 }
+
 #welcome {
     font-family: 'Kalam', cursive;
     font-size: 1.4em;
 }
+
 @media (max-width: 600px) {
   .header {
-    min-height: 120px; /* Reduce header height for better spacing */
+    min-height: 120px;
   }
 
   .header-title {
-    font-size: 1.5em; /* Adjust font size for readability */
+    font-size: 1.5em;
     padding: 5px;
   }
 
   .list ul {
-    flex-wrap: wrap; /* Allow items to wrap if needed */
-    justify-content: space-evenly; /* Center items properly */
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     gap: 10px;
   }
 
   .list ul li a {
-    padding: 6px 10px; /* Adjust padding for better spacing */
-    font-size: 0.9em; /* Reduce font size slightly */
+    padding: 6px 10px;
+    font-size: 0.9em;
   }
   .list ul li {
     flex: 1 1 40%;
