@@ -7,8 +7,8 @@ function adjustBodyPadding() {
   document.body.style.paddingTop = headerHeight + "px";
 }
 
-// Adjust body padding when the page loads
-window.onload = adjustBodyPadding;
+// Use DOMContentLoaded instead of window.onload
+document.addEventListener('DOMContentLoaded', adjustBodyPadding);
 
 // Adjust body padding when the window is resized
 window.onresize = adjustBodyPadding;
