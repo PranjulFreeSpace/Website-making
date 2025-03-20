@@ -1,0 +1,35 @@
+#nav-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+}
+
+#date-select {
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#prev-btn, #next-btn {
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  background: #2d89ef;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+#prev-btn:hover, #next-btn:hover {
+  background: #1c5fbf;
+}
+
+main {
+  padding: 20px;
+  line-height: 1.6;
+}

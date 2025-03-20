@@ -1,35 +1,43 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Diary</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diary Log</title>
+  <link rel="stylesheet" href="diary.css">
+  
+  <!-- Include Marked.js and JS -->
+  <script src="marked.min.js"></script>
+  <script src="diary.js" defer></script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7068BZR6GL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7068BZR6GL');
+</script>
 </head>
-
 <body>
-  <header>
-    <h2>Diary Log</h2>
-    <p>yahan pe list hai jo bhi main iss waqt dekh aur padh raha hun</p>
-  </header>
-  
-  <main>
-    <ul>
-      <div>
-        <h3>Currently Reading:</h3>
-        <li>Gunahon ka Devta</li>
-        <p>by dharmveer bharti. lagbhag 28% padh chuke.</p>
-        <li>Haqat</li>
-        <p>2vxuv38v</p>
-      </div>
-      <div>
-        
-      </div>
-    </ul>
-  </main>
-  
-  <footer></footer>
-  
-</body>
 
+<header>
+  <h1>Diary Log</h1>
+  <nav>
+    <a href="../../index.html">Home</a>
+  </nav>
+</header>
+
+<!-- Navigation buttons and date selector -->
+<div id="nav-controls">
+  <button id="prev-btn">← Previous</button>
+  <select id="date-select"></select>
+  <button id="next-btn">Next →</button>
+</div>
+
+<main id="diary-content">
+  <!-- Diary content will be loaded here -->
+</main>
+
+</body>
 </html>
