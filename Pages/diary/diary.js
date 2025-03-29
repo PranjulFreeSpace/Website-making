@@ -52,6 +52,7 @@ async function loadDiary(date = null) {
 // Function to render MD content
 async function renderMarkdown(mdFile, title, date) {
   try {
+    console.log(`Loading: ${mdFile}`);
     const response = await fetch(mdFile);
     if (!response.ok) throw new Error('Failed to load Markdown file');
     
@@ -85,3 +86,4 @@ function populateDropdown(entries) {
 
 // Initialize the diary on page load
 document.addEventListener('DOMContentLoaded', () => loadDiary());
+
