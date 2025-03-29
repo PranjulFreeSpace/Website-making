@@ -1,0 +1,55 @@
+/* Fixed Header with Gradient Background */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto; /* Allow height to adjust, but we'll constrain it */
+  min-height: 40px; /* Reduced min-height for compactness */
+  background: linear-gradient(135deg, #4F4F4F, #C6C6C6);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px; /* Reduced padding for less vertical space */
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+/* Header Text Styling */
+.header-title {
+  color: black;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.5em; /* Reduced from 2em for compactness */
+  font-weight: bold;
+  text-align: left;
+  padding: 5px 10px; /* Reduced vertical padding */
+  margin: 0;
+  white-space: nowrap; /* Prevent text from wrapping to a new line */
+}
+
+/* Navigation Styling */
+.nav-simple ul {
+  display: flex;
+  flex-wrap: nowrap; /* Ensure nav items stay in one line */
+  gap: 10px; /* Reduced gap for tighter spacing */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: flex-end;
+}
+
+.nav-simple ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px; /* Reduced padding for compactness */
+  border-radius: 5px;
+  transition: background 0.3s;
+  white-space: nowrap; /* Prevent link text from wrapping */
+}
+
+/* Optional: Hover Effect for Links */
+.nav-simple ul li a:hover {
+  background: #555;
+}
