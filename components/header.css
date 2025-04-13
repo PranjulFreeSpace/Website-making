@@ -53,3 +53,7 @@
 .nav-simple ul li a:hover {
   background: #555;
 }
+
+main {
+  padding: 50px;
+}
