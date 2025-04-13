@@ -1,32 +1,38 @@
 // components/header.js
-// Only run this script on non-index pages
 if (window.location.pathname !== '/index.html' && window.location.pathname !== '/') {
-  fetch('../../components/header.html') // Path from Pages/*/ to components/
-    .then(response => response.text())
+  fetch('/components/header.html') // Root-relative path for consistency
+    .then(response => {
+      if (!response.ok) throw new Error(`HTTP error ${response.status}`);
+      return response.text();
+    })
     .then(data => {
-      document.getElementById('header-placeholder').innerHTML = data;
-
-      // Define page-specific settings
-      const pageSettings = {
-        '/Pages/anime/anime.html': { title: '📺 Anime & Manga', exclude: 'anime' },
-        '/Pages/books/books.html': { title: '📚 Books', exclude: 'books' },
-        '/Pages/projects/projects.html': { title: '🔧 Projects', exclude: 'projects' },
-        '/Pages/extras/extras.html': { title: '✨ Extras', exclude: 'extras' }
+      const placeholder = document.getElementById('header-placeholder');
+      if (!placeholder) throw new Error('Header placeholder not found');
+      placeholder.innerHTML = data;
+      
+      // Page-specific titles
+      const pageTitles = {
+        '/Pages/anime/anime.html': '📺 Anime & Manga',
+        '/Pages/books/books.html': '📚 Books',
+        '/Pages/projects/projects.html': '🔧 Projects',
+        '/Pages/extras/extras.html': '✨ Extras'
       };
-
-      // Get current page path
-      const currentPath = window.location.pathname;
-      const settings = pageSettings[currentPath] || { title: 'Unknown Page', exclude: '' };
-
+      
       // Set the page title
-      document.getElementById('page-title').textContent = settings.title;
-
-      // Remove the current page's link from the nav (skip Home link)
-      const navList = document.getElementById('nav-list');
-      const currentLink = navList.querySelector(`[data-page="${settings.exclude}"]`);
-      if (currentLink) {
-        currentLink.parentElement.remove(); // Remove the <li> containing the link
+      const currentPath = window.location.pathname;
+      const title = pageTitles[currentPath] || 'Page Not Found';
+      const titleElement = document.getElementById('page-title');
+      if (titleElement) {
+        titleElement.textContent = title;
+      } else {
+        console.warn('Page title element not found');
       }
     })
-    .catch(error => console.error('Error loading header:', error));
-}Changes
+    .catch(error => {
+      console.error('Error loading header:', error);
+      const placeholder = document.getElementById('header-placeholder');
+      if (placeholder) {
+        placeholder.innerHTML = '<p>Failed to load navigation. Please try refreshing.</p>';
+      }
+    });
+}
