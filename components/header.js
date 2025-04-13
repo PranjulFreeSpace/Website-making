@@ -15,12 +15,10 @@ document.addEventListener("DOMContentLoaded", function() {
       return;
     }
     
-    // Dynamically calculate the path to the header file
-    const pathSegments = window.location.pathname.split("/").filter(Boolean);
-    let depth = pathSegments.length - 1;
-    let relativePath = "./" + "../".repeat(depth) + "components/header.html";
+    // Dynamically resolve relative path to header.html
+    const headerURL = new URL("../components/header.html", window.location.href);
     
-    fetch(relativePath)
+    fetch(headerURL)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Header file not found");
@@ -38,10 +36,12 @@ document.addEventListener("DOMContentLoaded", function() {
           "extras.html": "✨ Extras",
         };
         
-        const currentFile = pathSegments[pathSegments.length - 1];
-        const title = pageTitles[currentFile] || "Page Not Found";
+        const pathParts = window.location.pathname.split("/");
+        const pageName = pathParts[pathParts.length - 1];
         
+        const title = pageTitles[pageName] || "Page Not Found";
         const titleElement = document.getElementById("page-title");
+        
         if (titleElement) {
           titleElement.textContent = title;
         } else {
