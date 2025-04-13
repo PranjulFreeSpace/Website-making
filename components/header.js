@@ -1,28 +1,26 @@
 // components/header.js
-if (window.location.pathname !== '/index.html' && window.location.pathname !== '/') {
+if (window.location.pathname !== '/Website-making/index.html' && window.location.pathname !== '/Website-making/') {
   const placeholder = document.getElementById('header-placeholder') || document.body;
+  if (!placeholder) {
+    document.body.innerHTML = '<p>Error: No header placeholder found</p>';
+    return;
+  }
+  
   try {
-    // Try multiple paths
-    let response = await fetch('/components/header.html');
-    if (!response.ok) {
-      response = await fetch('../components/header.html'); // Fallback path
-    }
+    // Use correct GitHub Pages path
+    const response = await fetch('/Website-making/components/header.html');
     if (!response.ok) {
       throw new Error('Header file not found');
     }
     const data = await response.text();
-    
-    if (!placeholder) {
-      throw new Error('No placeholder or body found');
-    }
     placeholder.innerHTML = data;
     
     // Page-specific titles
     const pageTitles = {
-      '/Pages/anime/anime.html': '📺 Anime & Manga',
-      '/Pages/books/books.html': '📚 Books',
-      '/Pages/projects/projects.html': '🔧 Projects',
-      '/Pages/extras/extras.html': '✨ Extras'
+      '/Website-making/Pages/anime/anime.html': '📺 Anime & Manga',
+      '/Website-making/Pages/books/books.html': '📚 Books',
+      '/Website-making/Pages/projects/projects.html': '🔧 Projects',
+      '/Website-making/Pages/extras/extras.html': '✨ Extras'
     };
     
     // Set the page title
@@ -35,6 +33,6 @@ if (window.location.pathname !== '/index.html' && window.location.pathname !== '
       placeholder.innerHTML += '<p>Error: Title element missing</p>';
     }
   } catch (error) {
-    placeholder.innerHTML = `<p>Error loading header: ${error.message}. Try refreshing.</p>`;
+    placeholder.innerHTML = `<p>Error loading header: ${error.message}. Please try refreshing.</p>`;
   }
 }
