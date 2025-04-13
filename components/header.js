@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     
     // Dynamically resolve relative path to header.html
-    const headerURL = new URL("../components/header.html", window.location.href);
+    const headerURL = new URL("../../components/header.html", window.location.href);
     
     fetch(headerURL)
       .then((response) => {
