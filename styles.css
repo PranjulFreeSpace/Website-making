@@ -6,15 +6,18 @@
   width: 100%;
   height: auto;
   min-height: 170px;
-  background: linear-gradient(135deg, #0057ff, #ff3131); /* Gradient background */
+  background: linear-gradient(135deg, #ff3131, #0057ff);
+  /* Gradient background, ); */
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 15px 0;
   align-items: center;
-  z-index: 1000; /* Ensure header stays on top */
+  z-index: 1000;
+  /* Ensure header stays on top */
   padding-top: 10px;
-  box-sizing: border-box; /* Include padding in element's total width/height */
+  box-sizing: border-box;
+  /* Include padding in element's total width/height */
 }
 
 /* Header Text Styling */
@@ -24,9 +27,11 @@
   font-size: 2em;
   font-weight: bold;
   text-align: center;
-  background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+  background: rgba(0, 0, 0, 0.3);
+  /* Semi-transparent background */
   padding: 10px;
-  border-radius: 5px; /* Rounded corners */
+  border-radius: 5px;
+  /* Rounded corners */
 }
 
 /* Footer Styling */
@@ -40,7 +45,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #a3a3a3; /* Light gray background */
+  background: #a3a3a3;
+  /* Light gray background */
   padding: 5px;
 }
 
@@ -55,8 +61,10 @@ p {
 .list ul {
   display: flex;
   flex-wrap: nowrap;
-  gap: 15px; /* Space between list items */
-  list-style: none; /* Remove default bullet points */
+  gap: 15px;
+  /* Space between list items */
+  list-style: none;
+  /* Remove default bullet points */
   padding: 0;
   margin-bottom: 5px;
   overflow: hidden;
@@ -70,54 +78,89 @@ p {
   text-decoration: none;
   font-weight: bold;
   padding: 8px 15px;
-  border-radius: 5px; /* Rounded corners */
-  transition: background 0.3s; /* Smooth hover effect */
+  border-radius: 5px;
+  /* Rounded corners */
+  transition: background 0.3s;
+  /* Smooth hover effect */
 }
 
 /* Hover Effect for Navigation Links */
 .list ul li a:hover {
-  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+  background: rgba(255, 255, 255, 0.2);
+  /* Semi-transparent white background */
 }
 
 /* Body Styling */
 body {
-  background-color: #f9f5ec; /* Light beige background */
-  color: #333; /* Dark gray text */
-  padding-bottom: 20px;
+  background-color: #FAF1DC;
+  /* Light beige background */
+  color: #333;
+  /* Dark gray text */
+    font-family: "Kalam", cursive;
+  padding-bottom: 0px;
+  padding-right:0px;
+  margin-right:0px;
+  padding-left:0px;
+  margin-left:0px;
 }
 
 /* Welcome Section Styling */
 #welcome {
-  font-family: "Kalam", cursive;
   font-size: 1.4em;
+  padding: 10px;
+  padding-top:0px;
+}
+#Diary {
+  padding: 10px;
+}
+
+#contact {
+  background: linear-gradient(45deg, #717171, #9B9B9B);
+  bottom: 1;
+  flex-grow: 1;
+  margin-bottom: 20px;
+}
+.txt {
+  padding:10px;
 }
 
 /* Responsive Design for Smaller Screens */
 @media (max-width: 600px) {
   .header {
-    min-height: 120px; /* Reduce header height */
+    min-height: 120px;
+    /* Reduce header height */
   }
-
+  
   .header-title {
-    font-size: 1.5em; /* Smaller font size */
-    padding: 5px; /* Less padding */
+    font-size: 1.5em;
+    /* Smaller font size */
+    padding: 5px;
+    /* Less padding */
   }
-
+  
   .list ul {
-    flex-wrap: wrap; /* Allow wrapping of list items */
-    justify-content: space-evenly; /* Evenly distribute items */
-    gap: 10px; /* Reduce gap between items */
+    flex-wrap: wrap;
+    /* Allow wrapping of list items */
+    justify-content: space-evenly;
+    /* Evenly distribute items */
+    gap: 10px;
+    /* Reduce gap between items */
   }
-
+  
   .list ul li a {
-    padding: 6px 10px; /* Smaller padding */
-    font-size: 0.9em; /* Smaller font size */
+    padding: 6px 10px;
+    /* Smaller padding */
+    font-size: 0.9em;
+    /* Smaller font size */
   }
-
+  
   .list ul li {
-    flex: 1 1 40%; /* Allow items to take up 40% of the width */
-    text-align: center; /* Center-align text */
+    flex: 1 1 40%;
+    /* Allow items to take up 40% of the width */
+    text-align: center;
+    /* Center-align text */
   }
+  
   .foot {
     font-size: 12px;
   }
