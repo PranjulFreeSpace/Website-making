@@ -5,10 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Diary Log</title>
   <link rel="stylesheet" href="diary.css">
+    <link rel="stylesheet" href="../../components/header.css">
+
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Preload the font file -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   
   <!-- Include Marked.js and JS -->
   <script src="marked.min.js"></script>
   <script src="diary.js" defer></script>
+    <script src="../../components/header.js"></script>
+
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7068BZR6GL"></script>
 <script>
@@ -22,10 +32,7 @@
 <body>
 
 <header>
-  <h1>Diary Log</h1>
-  <nav>
-    <a href="../../index.html">Home</a>
-  </nav>
+    <div id="header-placeholder"></div>
 </header>
 
 <!-- Navigation buttons and date selector -->

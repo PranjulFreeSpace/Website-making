@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
           "books.html": "📚 Books",
           "projects.html": "🔧 Projects",
           "extras.html": "✨ Extras",
+          "diary.html": "Diary",
         };
         
         const pathParts = window.location.pathname.split("/");

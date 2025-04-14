@@ -4,7 +4,7 @@
   align-items: center;
   margin-bottom: 20px;
   padding: 10px;
-  background-color: #f4f4f4;
+  background-color: #FFE29D;
   border-radius: 5px;
 }
 
@@ -32,4 +32,12 @@
 main {
   padding: 20px;
   line-height: 1.6;
+}
+body {
+  background-color: #FAF1DC;
+  /* Light beige background */
+  color: #333;
+  /* Dark gray text */
+    font-family: "Kalam";
+    padding-top:60px;
 }
