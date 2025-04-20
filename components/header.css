@@ -5,8 +5,8 @@
   left: 0;
   width: 100%;
   height: auto; /* Allow height to adjust, but we'll constrain it */
-  min-height: 40px; /* Reduced min-height for compactness */
-  background: linear-gradient(135deg, #4F4F4F, #C6C6C6);
+  min-height: 40px; /* Reduced min-height for compactness #4F4F4F, #C6C6C6*/
+  background: linear-gradient(135deg, #C6C6C6, #4F4F4F);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
