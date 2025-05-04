@@ -45,24 +45,5 @@
 <main id="diary-content">
   <!-- Diary content will be loaded here -->
 </main>
-<script>
-  let triggered = false;
-  
-  function tryPlayAudio() {
-    if (triggered) return;
-    const audio = document.getElementById("bg-audio");
-    if (audio) {
-      audio.play().then(() => {
-        triggered = true;
-      }).catch(err => {
-        console.log("Playback failed:", err.message);
-      });
-    }
-  }
-  
-  ['click', 'touchstart', 'keydown'].forEach(event => {
-    window.addEventListener(event, tryPlayAudio, { once: true });
-  });
-</script>
 </body>
 </html>
