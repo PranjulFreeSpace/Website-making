@@ -1,0 +1,70 @@
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem 5vw;
+  width: 100%;
+}
+
+.blog-card {
+  padding: 1rem 1.5rem;
+  border-radius: 15px;
+  background: #CBB7898C; /* semi-transparent white */
+  backdrop-filter: blur(10px); /* adds a blur effect behind the card */
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  border-left: 5px solid #9E6E00FA;
+  border-bottom: 5px solid #9E6E00FA;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* subtle shadow for depth */
+  margin: 15px;
+  padding: 1.2rem 1.8rem;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.blog-card:hover {
+  transform: scale(1.01);
+  background: #CBB789FA; /* slightly less transparent on hover */
+  background-color: #CBB789FA;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1); /* stronger shadow on hover */
+}
+
+.blog-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #4B3B0F; /* Dark brownish for a warm vibe */
+}
+
+.blog-title a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+.blog-title a:hover {
+  color: #9E6E00; /* Gold-brown highlight on hover */
+}
+
+.blog-description {
+  color: #555;
+}
+
+body {
+  background-color: #FAF1DC;
+  /* Light beige background */
+  color: #333;
+  /* Dark gray text */
+    font-family: "Kalam";
+  padding-bottom: 0px;
+  padding-right:0px;
+  margin-right:0px;
+  padding-left:0px;
+  margin-left:0px;
+}
+main {
+  padding:0;
+  margin: 0;
+  margin-top: 100px;
+}
