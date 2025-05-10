@@ -3,6 +3,7 @@
     "slug": "blog1",
     "title": "Blog1",
     "description": "Incoming blog in few day......",
-    "tags": ["books", "life"]
+    "tags": ["books", "life"],
+    "theme": "special"
   }
 ]

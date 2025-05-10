@@ -17,14 +17,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const latestBlogContainer = document.getElementById("latest-blog");
   if (!latestBlogContainer) return;
 
-  fetch("blogs/blogs.json")
+  fetch("Pages/blogs/blogs.json")
     .then((res) => res.json())
     .then((blogs) => {
       if (!blogs.length) return;
 
       const latest = blogs[blogs.length - 1];
       latestBlogContainer.innerHTML = `
-        <div class="blog-card" onclick="location.href='blogs/blog-template.html?slug=${latest.slug}'">
+        <div class="blog-card" onclick="location.href='Pages/blogs/blog-template.html?slug=${latest.slug}'">
           <div class="blog-title">${latest.title}</div>
           <div class="blog-description">${latest.description}</div>
         </div>

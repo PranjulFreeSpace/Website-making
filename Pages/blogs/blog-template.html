@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blog</title>
+  <link rel="stylesheet" href="blogs2.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <main>
+    <div id="blog-content">Loading...</div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const slug = params.get("slug");
+
+    if (slug) {
+      // First fetch metadata to apply theme
+      fetch('blogs.json') // Adjust path as needed
+        .then(response => response.json())
+        .then(data => {
+          const blog = data.find(item => item.slug === slug);
+          if (blog && blog.theme === "special") {
+            document.body.classList.add("special-blog");
+          }
+        });
+
+      // Then fetch the markdown
+      fetch(`./blogsmd/${slug}.md`)
+        .then(res => {
+          if (!res.ok) throw new Error("Blog not found");
+          return res.text();
+        })
+        .then(markdown => {
+          const html = marked.parse(markdown);
+          document.getElementById("blog-content").innerHTML = html;
+        })
+        .catch(err => {
+          document.getElementById("blog-content").innerHTML = `<p>Error: ${err.message}</p>`;
+        });
+    } else {
+      document.getElementById("blog-content").innerHTML = "<p>Error: No blog specified in URL.</p>";
+    }
+  </script>
+</body>
+</html>

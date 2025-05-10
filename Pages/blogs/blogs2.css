@@ -1,0 +1,13 @@
+.special-blog {
+  background: linear-gradient(to bottom, #fdf6e3, #f5deb3);
+  font-family: 'Cormorant Garamond', serif;
+  color: #2b2b2b;
+}
+
+.special-blog .blog-content {
+  background: rgba(255, 1255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  border: 2px solid #d3c0a3;
+  padding: 2rem;
+  border-radius: 12px;
+}
