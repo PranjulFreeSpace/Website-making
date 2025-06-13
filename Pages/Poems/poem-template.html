@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>poem</title>
+  <link rel="stylesheet" href="poems2.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <main>
+    <div id="poem-content">Loading...</div>
+  </main>
+
+  <script src="../diary/marked.min.js"></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const slug = params.get("slug");
+
+    if (slug) {
+      // First fetch metadata to apply theme
+      fetch('poems.json') // Adjust path as needed
+        .then(response => response.json())
+        .then(data => {
+          const poem = data.find(item => item.slug === slug);
+          if (poem && poem.theme === "special") {
+            document.body.classList.add("special-poem");
+          }
+        });
+
+      // Then fetch the markdown
+      fetch(`./poemsmd/${slug}.md`)
+        .then(res => {
+          if (!res.ok) throw new Error("poem not found");
+          return res.text();
+        })
+        .then(markdown => {
+          const html = marked.parse(markdown);
+          document.getElementById("poem-content").innerHTML = html;
+        })
+        .catch(err => {
+          document.getElementById("poem-content").innerHTML = `<p>Error: ${err.message}</p>`;
+        });
+    } else {
+      document.getElementById("poem-content").innerHTML = "<p>Error: No poem specified in URL.</p>";
+    }
+  </script>
+</body>
+</html>

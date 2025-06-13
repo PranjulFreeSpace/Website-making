@@ -1,0 +1,40 @@
+<!-- poems/poems.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>poems</title>
+  <link rel="stylesheet" href="../../components/header.css">
+  <link rel="stylesheet" href="poems.css">
+  <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="header-placeholder"></div>
+  
+  <main>
+    <div id="poem-list"></div>
+  </main>
+  
+  <script src="../../components/header.js"></script>
+  <script>
+    fetch('poems.json')
+      .then(res => res.json())
+      .then(poems => {
+        const container = document.getElementById('poem-list');
+        poems.forEach(poem => {
+          const tags = poem.tags.map(tag => `<span class="tag">${tag}</span>`).join(" ");
+          container.innerHTML += `
+  <a href="poem-template.html?slug=${poem.slug}" class="poem-card">
+  <div class="poem-title">${poem.title}</div>
+  <div class="poem-description">${poem.description}</div>
+  <div class="tags">${tags}</div>
+</a>
+`;
+        });
+      });
+  </script>
+</body>
+
+</html>
