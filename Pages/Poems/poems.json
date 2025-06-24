@@ -3,21 +3,28 @@
     "slug": "HumDekhenge",
     "title": "Hum Dekhenge",
     "description": "The nazm was composed by Faiz Ahmad Faiz as a medium of protest against Zia Ul Haq's oppressive regime. It gained a rapid cult-following as a leftist song of resistance and defiance, after a public rendition by Iqbal Bano at Alhamra Arts Council on 13 February 1986, ignoring the ban on Faiz's poetry.",
-    "tags": ["#injustice", "#resistance", "#hope", "#inquilab"],
+    "tags": ["Faiz Ahmad Faiz"],
     "writer": "Faiz Ahmad Faiz"
   },
   {
   "slug": "PaheliMohabbat",
   "title": "मुझ से पहली सी मोहब्बत मिरी महबूब न माँग",
   "description": "The nazm was composed by Faiz Ahmad Faiz. Humein ye pasand aayi aur humne yahan likh diya hai. Faiz isse pahele romance likha karte the, lekin iss poem ke unka transition social justice or politics ki taraf hua.",
-  "tags": ["#injustice"],
+  "tags": ["Faiz Ahmad Faiz"],
   "writer": "Faiz Ahmad Faiz"
   },
-    {
-  "slug": "hatasha",
-  "title": "हताशा से एक व्यक्ति बैठ गया था",
-  "description": "Instagram mein milli thi, achhi lagi to yahan likhe de rahe hain, simple hai.",
+  {
+  "slug": "random",
+  "title": "Random lines",
+  "description": "Yahan par kush sher, shayari, gajal vagerah.",
   "tags": [],
-  "writer": "Vinod Kumar Shukl"
+  "writer": ""
+  },
+    {
+  "slug": "unka dar",
+  "title": "उनका डर",
+  "description": "",
+  "tags": ["Gorakh Pandey"],
+  "writer": "Gorakh Pandey"
 }
 ]
